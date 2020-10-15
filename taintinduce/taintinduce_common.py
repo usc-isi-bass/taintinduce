@@ -275,6 +275,7 @@ class State(acorn.Acorn):
         Raises:
             None
         """
+        super().__init__()
 
         if repr_str:
             self.deserialize(repr_str)
@@ -330,6 +331,7 @@ class Observation(acorn.Acorn):
         Raises:
             None
         """
+        super().__init__()
 
         if repr_str:
             self.deserialize(repr_str)
@@ -355,6 +357,7 @@ class Condition(acorn.Acorn):
                   'CMP': '_cmp_eval'}
 
     def __init__(self, conditions=None, repr_str=None):
+        super().__init__()
         if repr_str:
             self.deserialize(repr_str)
         else:
@@ -425,6 +428,7 @@ class Rule(acorn.Acorn):
     """
 
     def __init__(self, state_format=[], conditions=[], dataflows=[{}], repr_str=None):
+        super().__init__()
         if repr_str:
             self.deserialize(repr_str)
         else:

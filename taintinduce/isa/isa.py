@@ -5,6 +5,7 @@ import squirrel.acorn.acorn as acorn
 class Register(acorn.Acorn):
     structure = []
     def __init__(self, repr_str=None):
+        super().__init__()
         self.name = None
         self.uc_const = None
         self.bits = None
